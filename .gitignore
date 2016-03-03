@@ -1,0 +1,14 @@
+# Node Libraries
+node_modules/
+
+# npm
+npm-debug.log
+
+# Experiment code
+spike/
+
+# Notes for myself
+TODO.md
+
+# Detritus
+.DS_Store
