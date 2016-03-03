@@ -4,6 +4,14 @@ node_modules/
 # npm
 npm-debug.log
 
+# Compiled Python
+*.py[cod]
+
+# Python packages
+*.egg
+*.egg-info
+__pycache__
+
 # Experiment code
 spike/
 
