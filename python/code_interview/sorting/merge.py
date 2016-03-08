@@ -1,4 +1,3 @@
-
 def merge_sort(alist):
     if alist == []:
         return []
@@ -28,10 +27,10 @@ def merge(left, right):
                 merged.append(r_val)
                 left.append(l_val)
         elif left:
-            merged.extend(left)
+            merged.extend(reversed(left))
             done = True
         else:
-            merged.extend(right)
+            merged.extend(reversed(right))
             done = True
 
     return list(reversed(merged))
@@ -47,5 +46,8 @@ assert merge_sort(t2) == [1, 2, 3]
 
 t3 = []
 assert merge_sort(t3) == []
+
+t3 = [2, 1, 0]
+assert merge_sort(t3) == [0, 1, 2]
 
 print 'All tests pass!'
