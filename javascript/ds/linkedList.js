@@ -27,8 +27,8 @@ LinkedList.prototype.append = function (d) {
   node.next = end
 }
 
-LinkedList.prototype.extend = function(arr) {
-  var that = this;
+LinkedList.prototype.extend = function (arr) {
+  var that = this
   arr.forEach(function (e) { that.append(e) })
 }
 

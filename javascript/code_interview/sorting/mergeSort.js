@@ -5,7 +5,7 @@
 
 var assert = require('assert')
 
-function mergeSort(aList) {
+function mergeSort (aList) {
   if (aList.length < 2) {
     return aList
   }
@@ -17,7 +17,7 @@ function mergeSort(aList) {
   return merge(left, right)
 }
 
-function merge(left, right) {
+function merge (left, right) {
   var output = []
   var done = false
   // Sort in reverse order so we can use O(1) operations pop/push

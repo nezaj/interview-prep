@@ -13,7 +13,7 @@
  */
 var assert = require('assert')
 
-function combinePaths(pwd, input) {
+function combinePaths (pwd, input) {
   var output = [pwd]
   var start = 0
   var buffer = ''
