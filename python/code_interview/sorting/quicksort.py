@@ -1,5 +1,3 @@
-
-
 def quicksort(arr):
     if len(arr) < 2:
         return arr
