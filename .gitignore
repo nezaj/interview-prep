@@ -20,3 +20,8 @@ TODO.md
 
 # Detritus
 .DS_Store
+
+# Don't make interview challenges/solutions public
+braintree/
+instacart/
+disqus/
