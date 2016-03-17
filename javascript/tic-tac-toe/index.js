@@ -55,7 +55,7 @@
     var that = this
 
     // Handle clicking on cells
-    var cells = [].slice.call(document.querySelectorAll('td'))
+    var cells = [].slice.call(document.getElementsByTagName('td'))
     cells.forEach(function (cell) {
       cell.addEventListener('click', that.handleClick.bind(that))
     })
@@ -179,7 +179,7 @@
 
   // Starts a new tic-tac-toe Game
   function newGame () {
-    var container = document.querySelectorAll('#container')[0]
+    var container = document.getElementById('container')
     var g = new Game()
     g.initializeBoard()
     g.drawGame(container)
