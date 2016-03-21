@@ -3,8 +3,7 @@
  * a re-render when the internal state of the underlying data changes.
  * In this case, try implementing a lightweight react component library
  */
-(function() {
-
+(function () {
   // Generic Library component which all custom components should inherit from
   var Component = function (root) {
     this.root = root
@@ -76,7 +75,7 @@
     {
       'name': 'Nic',
       'number': '2'
-    },
+    }
   ])
 
   // Debugging purposes

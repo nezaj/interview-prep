@@ -6,7 +6,7 @@
 
 var obj, f
 
-function wrapValue() {
+function wrapValue () {
   return function () { return this.val }
 }
 
@@ -15,7 +15,7 @@ obj = { 'val': 10 }
 f = wrapValue.call(obj, 10)
 console.log(f()) // undefined
 
-function wrapValueThat() {
+function wrapValueThat () {
   var that = this
   return function () { return that.val }
 }
