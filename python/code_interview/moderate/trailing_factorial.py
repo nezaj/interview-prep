@@ -8,9 +8,8 @@ def trailing_factorial(n):
 
     count = 0
     divisor = 5
-    multiplier = 1
     while n / divisor > 0:
-        count += (n / divisor) * multiplier
+        count += (n / divisor)
         divisor *= divisor
 
     return count

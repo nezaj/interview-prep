@@ -5,10 +5,9 @@ function makeChange (amount, items) {
 
   var candidates = items.filter(function (item) { return item <= amount })
   while (candidates.length > 0) {
-    var candidate = candidates.shift()
-    var updated_amount = amount -= candidate
-    var solution = makeChange(updated_amount, items)
-    if (solution) { return [candidate].concat(solution) }
+    var head = candidates.shift()
+    var tail = makeChange(amount -= head, items)
+    if (tail) { return [head].concat(tail) }
   }
 }
 
