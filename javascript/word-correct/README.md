@@ -1,5 +1,5 @@
 # Word Correction Take-Home
-Solutions for Disqus word correction take home written by Joe Averbukh (nezaj)
+Word correction take home challenge written by Joe Averbukh (nezaj)
 
 ### Run it
 ```

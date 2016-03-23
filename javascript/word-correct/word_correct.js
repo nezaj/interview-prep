@@ -1,4 +1,4 @@
-// # Word Correction Take-Home
+// # Word Correction
 //
 // Write a program in JavaScript that reads a large list of English words (e.g. from /usr/share/dict/words on a unix system) into memory, and then reads words from stdin, and prints either the best spelling correction, or "NO CORRECTION" if no suitable correction can be found.
 //
