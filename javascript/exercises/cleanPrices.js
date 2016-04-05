@@ -1,3 +1,5 @@
+// Clean prices
+//
 // base_price cleaning_fee   total
 //   6.3        5.4          11.7
 //   6          6            12 = round(11.7) better
@@ -5,6 +7,8 @@
 //   7          5            12
 //   0.7        0.4          1.1
 
+// Write a function that satisifies the following:
+//
 // float array A = [x1, x2, ..., xn]  T = Round(x1+x2+... +xn).
 // int array B = [y1, y2, ...., yn] y1+y2+...+yn = T
 // minimize sum |x_i-y_i|

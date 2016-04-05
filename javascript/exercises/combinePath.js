@@ -10,6 +10,8 @@
  * combinePaths('/abc', './') -> '/abc'
  * combinePaths('/abc', 'def/./') -> '/abc/def'
  * combinePaths('/abc', '/def/.././xyz') -> '/xyz'
+ *
+ * XXX: This could use some serious cleanup
  */
 var assert = require('assert')
 

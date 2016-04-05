@@ -1,41 +1,21 @@
-/* Disquis phone interview:
- * Implement/test debounce
- */
+// Debounce as implemented underscore style
+k
 var assert = require('assert')
 
-function debounce (cb, intervalMs) {
-  var start
+function debounce (func, wait, immediate) {
+  var timeout, result
   return function () {
-    var now = new Date().getTime()
-    if (start === undefined || now - start > intervalMs) {
-      start = new Date().getTime()
-      cb()
+    var context = this
+    var args = arguments
+    var later = function () {
+      timeout = null
+      if (!immediate) { result = func.apply(context, args) }
     }
+    var callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) { result = func.apply(context, args) }
+
+    return result
   }
 }
-
-let logcalled = 0
-let oldlog = console.log
-console.log = function () {
-  logcalled++
-  oldlog.apply(oldlog, arguments)
-}
-
-// production code
-let helloDebounced = debounce(() => { console.log('Hello') }, 10000)
-
-// testing production code to guarantee that helloDebounced is actually debounced for 10000ms
-/* eslint-disable no-extend-native */
-Date.prototype.getTime = function () { return 0 }
-helloDebounced()
-assert.deepEqual(logcalled, 1)
-
-// helloBounced should not have been called again, enough time hasn't passed
-helloDebounced()
-assert.deepEqual(logcalled, 1)
-
-// helloBounced should be called again, enough time has passed
-Date.prototype.getTime = function () { return 10001 }
-helloDebounced()
-assert.deepEqual(logcalled, 2)
-/* eslint-enable */

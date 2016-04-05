@@ -1,3 +1,4 @@
+// makeChange problem solved using recursion
 var assert = require('assert')
 
 function makeChange (amount, items) {
