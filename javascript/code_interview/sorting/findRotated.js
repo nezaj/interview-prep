@@ -15,26 +15,18 @@ function findRotated (aList, target) {
     mid = Math.floor((left + right) / 2)
     if (aList[mid] === target) {
       return mid
-      // target is bigger
-    } else if (aList[mid] < target) {
-      // Left side has smaller values
-      if (aList[mid] < aList[left]) {
-        left = mid + 1
-      // Left side has bigger values
-      } else {
+    } else if (aList[left] <= aList[mid]) {
+      if (target >= aList[left] && target < aList[mid]) {
         right = mid - 1
-      }
-      // target is smaller
-    } else if (aList[mid] > target) {
-      // Right side has smaller values
-      if (aList[mid] > aList[right]) {
-        left = mid + 1
-      // Right side has bigger values
       } else {
-        right = mid - 1
+        left = mid + 1
       }
     } else {
-      throw Error('Unexpected code-path!')
+      if (target <= aList[right] && target > aList[mid]) {
+        left = mid + 1
+      } else {
+        right = mid - 1
+      }
     }
   }
 

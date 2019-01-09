@@ -12,7 +12,7 @@ function wrapValue () {
 
 obj = { 'val': 10 }
 
-f = wrapValue.call(obj, 10)
+f = wrapValue.call(obj)
 console.log(f()) // undefined
 
 function wrapValueThat () {
@@ -20,5 +20,5 @@ function wrapValueThat () {
   return function () { return that.val }
 }
 
-f = wrapValueThat.call(obj, 10)
+f = wrapValueThat.call(obj)
 console.log(f()) // 10

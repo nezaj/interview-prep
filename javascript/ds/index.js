@@ -1,5 +1,9 @@
-var LinkedList = require('./LinkedList')
+const LinkedList = require('./LinkedList')
+const BinarySearchTree = require('./bst')
+const BinTree = require('./binTree').BinTree
 
 module.exports = {
-  LinkedList: LinkedList
+  LinkedList: LinkedList,
+  BinTree: BinTree,
+  BinarySearchTree: BinarySearchTree
 }

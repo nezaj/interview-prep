@@ -17,7 +17,7 @@ floating-point is most performant
 
 * Item 5: Never use `==` for comparing mixed types, as this will result in implicit coercions. Compare values of identical types and use `===` instead.
 
-* Item 6: Semi-colons are only inferred before a `}`, `\n`, or the end of the program. It is injected only if the next token cannot be parsed.
+* Item 6: Semi-colons are only inferred before a `}`, `\n`, or the end of the program. It is injected only if the next token cannot be parsed. -- ALWAYS PUT A SEMICOLON BEFORE A LINE THAT STARTS WITH '(', '[', '+', '-', '/'
 
 * Item 7: Think of strings as sequences of 16 bit code units. Beware when using special unicode characters, since these can use multiple code units to represent one character it may throw off operators like indexing and length. Use a special unicode-aware library for these instances
 
